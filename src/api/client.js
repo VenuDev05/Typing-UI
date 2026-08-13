@@ -1,6 +1,6 @@
 // API wrapper. Attaches the JWT (if present) and exposes typed helpers.
 
-const BASE = '/api';
+const BASE = import.meta.env.VITE_API_URL || '/api';
 const TOKEN_KEY = 'tt_token';
 
 export function getToken() { return localStorage.getItem(TOKEN_KEY); }
